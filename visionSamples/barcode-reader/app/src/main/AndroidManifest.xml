@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.gms.samples.vision.barcodereader"
+    android:installLocation="auto">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="MultiTrackerApp"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.AppCompat">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity android:name=".userInterface.MainActivity" android:label="products management">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".userInterface.DetailActivity"
+            android:label="details"
+            android:parentActivityName=".userInterface.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".userInterface.MainActivity" />
+        </activity>
+        <activity
+            android:name=".barcode.BarcodeCaptureActivity"
+            android:label="Read Barcode" />
+
+        <service
+            android:name=".sync.ProductsIntentService"
+            android:exported="false" />
+
+        <provider
+            android:name=".data.generated.ProductsProvider"
+            android:authorities="com.google.android.gms.samples.vision.barcodereader"
+            android:exported="false" />
+
+        <activity android:name=".userInterface.SellActivity" android:label="sell details">
+
+        </activity>
+    </application>
+
+</manifest>

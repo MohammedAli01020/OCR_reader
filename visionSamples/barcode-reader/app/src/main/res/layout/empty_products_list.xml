@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_empty_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="empty list"
+        android:src="@drawable/ic_products" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingTop="16dp"
+        android:text="empty data"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif"
+        android:paddingTop="8dp"
+        android:text="add products"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#A2AAB0" />
+</LinearLayout>
